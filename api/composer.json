@@ -1,0 +1,23 @@
+{
+    "name": "phgodoycosta/api",
+    "description": "API para consumir no Electron",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\": "/"
+        }
+    },
+
+    "scripts": {
+        "start": "php -S localhost:8080"
+    },
+    "authors": [
+        {
+            "name": "phgodoycosta",
+            "email": "phgodoycosta@gmail.com"
+        }
+    ],
+    "require": {
+        "bramus/router": "^1.6"
+    }
+}

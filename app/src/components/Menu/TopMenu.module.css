@@ -1,0 +1,47 @@
+.menu {
+    display: flex;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.top_menu {
+    background-color: var(--azul);
+    display: flex;
+    gap: 10px;
+}
+
+.top_menu .link {
+    color: var(--branco);
+    padding: 10px;
+    text-decoration: none;
+    font-family: 'Exo 2';
+    font-size: 1.1em;
+    transition: all 0.5s;
+}
+
+.top_menu .link::after {
+    content: "";
+    width: 5px;
+    height: 100%;
+    background-color: white;
+}
+
+.top_menu .link:hover {
+    text-decoration: underline;
+}
+
+.search_area {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    padding: 10px;
+    align-items: center;
+}
+
+.search_input {
+    height: 80%;
+    min-width: 50px;
+}

@@ -1,0 +1,24 @@
+{
+  "name": "kraken-games",
+  "version": "1.0.0",
+  "description": "Um App para instalação de jogos fictício",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "npx electronmon .",
+    "react": "cd app && npm run build && cd .. && npm run start",
+    "api": "cd api && php -S localhost:8080"
+  },
+  "keywords": [
+    "electron",
+    "react",
+    "javascript"
+  ],
+  "author": "Pedro Henrique Godoy Costa",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^25.3.2",
+    "sqlite": "^5.0.1",
+    "sqlite3": "^5.1.6"
+  }
+}
