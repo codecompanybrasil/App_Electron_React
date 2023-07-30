@@ -1,6 +1,6 @@
 import SimpleButton from "../Buttons/SimpleButton"
 import { useState } from "react"
-import styles from './AddRecentFiles.module.css'
+import styles from './RecentFiles.module.css'
 
 function AddRecentFiles(props) {
     const ipcRenderer = window.ipcRenderer
@@ -16,10 +16,12 @@ function AddRecentFiles(props) {
     }
  
     return (
-        <div className={styles.contain_add_recent_files}>
-            <h2>Adicione um arquivo no banco</h2>
-            <input type="text" placeholder="Nome do arquivo" onChange={changeInputValue} />
-            <SimpleButton onClick={ButtonOnClick} text="Aperta aqui" />
+        <div className={styles.centralizador}>
+            <div className={styles.contain_add_recent_files}>
+                <h2>Adicione um arquivo no banco</h2>
+                <input type="text" placeholder="Nome do arquivo" onChange={changeInputValue} />
+                <SimpleButton onClick={ButtonOnClick} text="Aperta aqui" />
+            </div>
         </div>
     )
 }

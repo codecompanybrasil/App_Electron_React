@@ -7,5 +7,6 @@ Nesse projeto temos:
 - [x] Rodar React no Electron
 - [x] Electron recebendo informações do React
 - [x] Electron interagindo com banco SQLITE
-- [ ] React consumindo um api externa (servidor PHP Discipline)
+- [x] React consumindo um api externa (servidor PHP Discipline)
 - [ ] Build disso tudo em um executável
+- [ ] Como adicionar o autoUpdater no Electron para ele se auto atualizar

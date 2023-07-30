@@ -1,7 +1,0 @@
-.contain_add_recent_files {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column nowrap;
-    max-width: 300px;
-}

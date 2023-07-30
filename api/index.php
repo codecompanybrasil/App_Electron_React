@@ -7,6 +7,8 @@
     use Bramus\Router\Router;
     // use Db;
 
+    header("Access-Control-Allow-Origin: *");
+
     $router = new Router();
     $db = new Db();
 

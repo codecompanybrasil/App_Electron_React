@@ -23,7 +23,7 @@ function createMainWindow() {
 
     window.loadURL(startUrl)
 
-    //window.webContents.openDevTools()
+    window.webContents.openDevTools()
 }
 
 
