@@ -6,9 +6,9 @@ function PrintRecentFiles() {
     const banco = window.banco
     const [data, setData] = useState(null)
 
-    const getRecentFilesData = async () => {
+    const getRecentFilesData = () => {
         try {
-            const res = await banco.getRecentFiles()
+            const res = banco.getRecentFiles()
             console.log(res)
             setData(JSON.stringify(res, null, 2))
         } catch (error) {

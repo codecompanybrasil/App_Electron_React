@@ -15,7 +15,7 @@ function createMainWindow() {
     })
 
     const startUrl = url.format({
-        pathname: path.join(__dirname, "./app/build/index.html"),
+        pathname: path.join(__dirname, "../build/index.html"),
         protocol: 'file'
     })
 
@@ -23,7 +23,7 @@ function createMainWindow() {
 
     window.loadURL(startUrl)
 
-    window.webContents.openDevTools()
+    // window.webContents.openDevTools()
 }
 
 
@@ -37,3 +37,5 @@ ipcMain.on('submit:SimpleForm', (event, args) => {
 ipcMain.on('banco:addRecentFiles', (event, nomeDoArquivo) => {
     addRecentFiles(nomeDoArquivo)
 })
+
+module.exports = app
