@@ -35,9 +35,7 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
+            "license": ["MIT"],
             "authors": [
                 {
                     "name": "Bram(us) Van Damme",
@@ -47,10 +45,7 @@
             ],
             "description": "A lightweight and simple object oriented PHP Router",
             "homepage": "https://github.com/bramus/router",
-            "keywords": [
-                "router",
-                "routing"
-            ],
+            "keywords": ["router", "routing"],
             "support": {
                 "issues": "https://github.com/bramus/router/issues",
                 "source": "https://github.com/bramus/router/tree/1.6.1"

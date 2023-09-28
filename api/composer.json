@@ -7,7 +7,6 @@
             "App\\": "/"
         }
     },
-
     "scripts": {
         "start": "php -S localhost:8080"
     },

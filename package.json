@@ -1,74 +1,78 @@
 {
-  "name": "kraken-games",
-  "version": "1.0.0",
-  "description": "Um App para instalação de jogos fictício",
-  "main": "public/electron.js",
-  "homepage": ".",
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "electron": "electron .",
-    "dev": "npx electronmon .",
-    "react": "npm run build && npm run electron",
-    "api": "cd api && php -S localhost:8080",
-    "buildLinux": "npx electron-builder -l",
-    "electron:package:win": "npm exec electron-builder -w",
-    "postinstall": "electron-builder install-app-deps"
-  },
-  "keywords": [
-    "electron",
-    "react",
-    "javascript"
-  ],
-  "build": {
-    "appId": "com.example.electron_react",
-    "productName": "Eletron React App",
-    "files": [
-      "build/**/*",
-      "node_modules/**/*"
-    ],
-    "directories": {
-      "buildResources": "app/public"
+    "name": "kraken-games",
+    "version": "1.0.0",
+    "description": "Um App para instalação de jogos fictício",
+    "main": "public/electron.js",
+    "homepage": ".",
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+        "preview": "vite preview",
+        "electron": "electron .",
+        "react": "npm run build && npm run electron",
+        "api": "cd api && php -S localhost:8080",
+        "buildLinux": "npx electron-builder -l",
+        "electron:package:win": "npm exec electron-builder -w",
+        "postinstall": "electron-builder install-app-deps"
     },
-    "linux": {
-      "icon": "build/logo512.png"
-    }
-  },
-  "author": {
-    "name": "Pedro Henrique Godoy Costa",
-    "email": "phgodoycosta@gmail.com"
-  },
-  "license": "MIT",
-  "dependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "axios": "^1.4.0",
-    "better-sqlite3": "^8.5.0",
-    "formik": "^2.4.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^4.10.1",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
-  },
-  "devDependencies": {
-    "electron": "^25.3.2",
-    "electron-rebuild": "^3.2.9"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
+    "keywords": [
+        "electron",
+        "react",
+        "javascript"
     ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+    "build": {
+        "appId": "com.example.electron_react",
+        "productName": "Eletron React App",
+        "files": [
+            "build/**/*",
+            "node_modules/**/*"
+        ],
+        "directories": {
+            "buildResources": "app/public"
+        },
+        "linux": {
+            "icon": "build/logo512.png"
+        }
+    },
+    "author": {
+        "name": "Pedro Henrique Godoy Costa",
+        "email": "phgodoycosta@gmail.com"
+    },
+    "license": "MIT",
+    "dependencies": {
+        "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+        "axios": "^1.4.0",
+        "better-sqlite3": "^8.5.0",
+        "formik": "^2.4.2",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-icons": "^4.10.1",
+        "web-vitals": "^2.1.4"
+    },
+    "devDependencies": {
+        "electron": "^25.3.2",
+        "electron-rebuild": "^3.2.9",
+        "@types/react": "^18.2.15",
+        "@types/react-dom": "^18.2.7",
+        "@typescript-eslint/parser": "^6.0.0",
+        "@vitejs/plugin-react": "^4.0.3",
+        "eslint": "^8.45.0",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "eslint-plugin-react-refresh": "^0.4.3",
+        "typescript": "^5.0.2",
+        "vite": "^4.4.5"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
 }

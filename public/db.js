@@ -1,5 +1,5 @@
-const Database = require("better-sqlite3")
-const path = require("path")
+const Database = require("better-sqlite3");
+const path = require("path");
 // const sqlite3 = require("sqlite3");
 
 // let dbPath;
@@ -38,7 +38,7 @@ function getRecentFiles() {
 }
 
 function addRecentFiles(nome) {
-  //Alerta de SQL Injection ksks
+    //Alerta de SQL Injection ksks
     const query = `INSERT INTO vistosRecentemente (nome) VALUES (?)`;
 
     db.prepare(query).run(nome);
@@ -54,5 +54,6 @@ function addRecentFiles(nome) {
 // console.log(getRecentFiles())
 
 module.exports = {
-    getRecentFiles, addRecentFiles
-}
+    getRecentFiles,
+    addRecentFiles,
+};

@@ -1,21 +1,21 @@
-const { contextBridge, ipcRenderer } = require("electron")
-const { getRecentFiles: callRecentFiles } = require("./db")
+const { contextBridge, ipcRenderer } = require("electron");
+const { getRecentFiles: callRecentFiles } = require("./db");
 
-const os = require("os")
+const os = require("os");
 
-contextBridge.exposeInMainWorld('electron', {
+contextBridge.exposeInMainWorld("electron", {
     homeDir: () => os.homedir(),
     arch: () => os.arch(),
-    version: () => os.version()
-})
+    version: () => os.version(),
+});
 
-contextBridge.exposeInMainWorld('banco', {
-    getRecentFiles: () => callRecentFiles()
-})
+contextBridge.exposeInMainWorld("banco", {
+    getRecentFiles: () => callRecentFiles(),
+});
 
-contextBridge.exposeInMainWorld('ipcRenderer', {
+contextBridge.exposeInMainWorld("ipcRenderer", {
     send: (channel, data) => ipcRenderer.send(channel, data),
     on: (channel, func) => {
-        ipcRenderer.on(channel, (event, ...args) => func(...args))
-    }
-})
+        ipcRenderer.on(channel, (event, ...args) => func(...args));
+    },
+});

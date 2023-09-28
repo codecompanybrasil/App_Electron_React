@@ -1,8 +1,7 @@
-const { app, BrowserWindow, ipcMain } = require('electron')
-const { getRecentFiles, addRecentFiles } = require("./db")
-const url = require('url')
-const path = require('path')
-
+const { app, BrowserWindow, ipcMain } = require("electron");
+const { getRecentFiles, addRecentFiles } = require("./db");
+const url = require("url");
+const path = require("path");
 
 function createMainWindow() {
     const window = new BrowserWindow({
@@ -11,32 +10,30 @@ function createMainWindow() {
         webPreferences: {
             contextIsolation: true,
             nodeIntegration: true,
-            preload: path.join(__dirname, "preload.js")
-        }
-    })
+            preload: path.join(__dirname, "preload.js"),
+        },
+    });
 
     const startUrl = url.format({
         pathname: path.join(__dirname, "../build/index.html"),
-        protocol: 'file'
-    })
+        protocol: "file",
+    });
 
-    console.log(`\n\n${startUrl}\n\n`)
+    console.log(`\n\n${startUrl}\n\n`);
 
-    window.loadURL(startUrl)
+    window.loadURL(startUrl);
 
     // window.webContents.openDevTools()
 }
 
+app.whenReady().then(createMainWindow);
 
+ipcMain.on("submit:SimpleForm", (event, args) => {
+    console.log(args, event);
+});
 
-app.whenReady().then(createMainWindow)
+ipcMain.on("banco:addRecentFiles", (event, nomeDoArquivo) => {
+    addRecentFiles(nomeDoArquivo);
+});
 
-ipcMain.on('submit:SimpleForm', (event, args) => {
-    console.log(args, event)
-})
-
-ipcMain.on('banco:addRecentFiles', (event, nomeDoArquivo) => {
-    addRecentFiles(nomeDoArquivo)
-})
-
-module.exports = app
+module.exports = app;
