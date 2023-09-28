@@ -3,7 +3,6 @@ const { getRecentFiles: callRecentFiles } = require("./db")
 
 const os = require("os")
 
-
 contextBridge.exposeInMainWorld('electron', {
     homeDir: () => os.homedir(),
     arch: () => os.arch(),

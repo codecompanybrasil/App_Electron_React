@@ -3,6 +3,7 @@ const { getRecentFiles, addRecentFiles } = require("./db")
 const url = require('url')
 const path = require('path')
 
+
 function createMainWindow() {
     const window = new BrowserWindow({
         width: 1000,
